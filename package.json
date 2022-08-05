@@ -4,7 +4,8 @@
   "description": "typescript-asmt-pet",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,21 @@
     "url": "https://github.com/Andrew-Omelchenko/typescript-asmt-pet/issues"
   },
   "homepage": "https://github.com/Andrew-Omelchenko/typescript-asmt-pet#readme",
-  "dependencies": {
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && ng lint"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": "prettier --write"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.4",
+    "husky": "^4.3.8",
+    "lint-staged": "^13.0.3",
     "ts-node": "^10.9.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.7.4"
   }
 }
