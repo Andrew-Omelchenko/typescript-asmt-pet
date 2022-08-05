@@ -1,0 +1,23 @@
+{
+  "name": "typescript-asmt-pet",
+  "version": "0.0.0",
+  "description": "typescript-asmt-pet",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-Omelchenko/typescript-asmt-pet.git"
+  },
+  "author": "Andrew A. Omelchenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andrew-Omelchenko/typescript-asmt-pet/issues"
+  },
+  "homepage": "https://github.com/Andrew-Omelchenko/typescript-asmt-pet#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
