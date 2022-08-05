@@ -4,7 +4,12 @@
   "description": "typescript-asmt-pet",
   "main": "index.ts",
   "scripts": {
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build-prod": "webpack --node-env production --config webpack.prod.js",
+    "build-staging": "webpack --node-env staging --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint --fix -p tsconfig.json",
     "prettier": "prettier --write src/**/*.ts"
   },
   "repository": {
@@ -27,11 +32,19 @@
   },
   "devDependencies": {
     "@types/node": "^18.6.4",
+    "codelyzer": "^6.0.0",
+    "file-replace-loader": "^1.4.0",
+    "html-webpack-plugin": "^5.3.2",
     "husky": "^4.3.8",
     "lint-staged": "^13.0.3",
     "ts-node": "^10.9.1",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^4.7.4"
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.7.4",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
   }
 }
